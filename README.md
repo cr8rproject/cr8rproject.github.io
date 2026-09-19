@@ -8,4 +8,4 @@ and force replaced on each deploy.
 
 Live at https://cr8rproject.github.io
 
-Last deploy: source `a29bd02`, 2026-09-19T10:13:36Z
+Last deploy: source `24ba2df`, 2026-09-19T12:13:28Z
