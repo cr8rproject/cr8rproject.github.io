@@ -21,14 +21,13 @@
     <meta name="apple-mobile-web-app-title" content="CR8R" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- One fetch for both families, the weights the product actually uses:
-         Inter 300/400/500/600/700 (700 was missing, so every font-bold was a
-         browser-synthesized fake bold) and Montserrat 300, the film's display
-         weight and the only one with a call site. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300&display=swap"></noscript>
+    <!-- Both families are served from this origin (see the @font-face block at
+         the top of src/index.css). The Google stylesheet used to be deferred,
+         so the first paint used the system font and the page recomposed itself
+         once it arrived. These two are the faces the first screen needs:
+         Montserrat 300 draws the display line, Inter 400 the line under it. -->
+    <link rel="preload" href="/fonts/montserrat-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
@@ -40,8 +39,8 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="CR8R" />
     <meta name="twitter:description" content="CR8R. A production house for streetwear brands: from a photo to a finished piece, made in Portugal." />
-    <script type="module" crossorigin src="/assets/index-CSlILaj5.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C1ZSdqFF.css">
+    <script type="module" crossorigin src="/assets/index-7NgfWO3p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BoIhRjdB.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
