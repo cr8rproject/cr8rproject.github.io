@@ -8,7 +8,10 @@
     <meta name="theme-color" content="#292524" />
 
     <title>CR8R</title>
-    <meta name="description" content="CR8R. A production house for streetwear brands: from a photo to a finished piece, made in Portugal." />
+    <!-- The public page's words (2026-09-29): what a link preview shows in an
+         Instagram DM, WhatsApp or iMessage before the page opens. The public
+         face is ATLR404 Private; CR8R is never on it. -->
+    <meta name="description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
     <meta name="author" content="CR8R" />
 
     <!-- Inline SVG favicon: CR8R orange wordmark monogram on charcoal -->
@@ -31,16 +34,36 @@
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CR8R" />
-    <meta property="og:description" content="CR8R. A production house for streetwear brands: from a photo to a finished piece, made in Portugal." />
-    <meta property="og:site_name" content="CR8R" />
+    <meta property="og:title" content="ATLR404 Private" />
+    <meta property="og:description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
+    <meta property="og:site_name" content="ATLR404 Private" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="CR8R" />
-    <meta name="twitter:description" content="CR8R. A production house for streetwear brands: from a photo to a finished piece, made in Portugal." />
-    <script type="module" crossorigin src="/assets/index-2fExZI35.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BmwC1NBF.css">
+    <meta name="twitter:title" content="ATLR404 Private" />
+    <meta name="twitter:description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
+    <!-- The public page is black from the first paint (2026-09-29 audit: the
+         back office's grey grid showed for up to two seconds before it). The
+         router takes the class off again if it sends the visitor elsewhere. -->
+    <script>
+      // GitHub Pages serves "/apply" as "/apply/": the slash never matters.
+      var publicPath = location.pathname.replace(/\/+$/, "") || "/";
+      if (publicPath === "/" || publicPath === "/apply") {
+        document.documentElement.classList.add("public-surface");
+        var tc = document.querySelector('meta[name="theme-color"]');
+        if (tc) tc.setAttribute("content", "#0a0a0a");
+        // The public face is ATLR404 Private, never CR8R: the tab, its icon
+        // and the name a phone gives the page on its home screen.
+        document.title = "ATLR404 Private \u00b7 Custom fashion production";
+        var icon = document.querySelector('link[rel="icon"]');
+        if (icon) icon.setAttribute("data-app-href", icon.getAttribute("href"));
+        if (icon) icon.setAttribute("href", "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffffff' stroke-width='5'/></svg>");
+        var appTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
+        if (appTitle) appTitle.setAttribute("content", "ATLR404");
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-DSbt5DBR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cvoi7Gna.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
