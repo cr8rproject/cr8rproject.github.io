@@ -10,4 +10,4 @@ screens (`.assets-manifest` lists the files of the current build).
 
 Live at https://cr8rproject.github.io
 
-Last deploy: source `3077e7a4`, 2026-10-02T10:43:31Z
+Last deploy: source `6be1e240`, 2026-10-02T15:33:56Z
