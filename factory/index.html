@@ -61,9 +61,33 @@
         var appTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
         if (appTitle) appTitle.setAttribute("content", "ATLR404");
       }
+      // The landing's first picture, fetched before the first paint, as
+      // ATLR404's site does for its opening: the opening waits for it, and on
+      // a cold visit the request used to start only once the app had loaded.
+      // One file per framing, the same the page's <picture> picks, so nothing
+      // downloads twice. Only when the landing will show: LANDING_OPEN
+      // follows src/lib/flags.ts (a test keeps them together), and while the
+      // site is closed only the preview shows it.
+      var LANDING_OPEN = false;
+      var previewing = /[?&]preview=1(&|$)/.test(location.search);
+      if (publicPath === "/" && (LANDING_OPEN || previewing)) {
+        [
+          ["/landing/placeholder-production-tall.jpg", "(max-width: 1023.98px)"],
+          ["/landing/placeholder-production-wide.jpg", "(min-width: 1024px)"],
+        ].forEach(function (pick) {
+          var pl = document.createElement("link");
+          pl.rel = "preload";
+          pl.as = "image";
+          pl.href = pick[0];
+          pl.media = pick[1];
+          pl.setAttribute("fetchpriority", "high");
+          pl.setAttribute("data-landing-preload", "");
+          document.head.appendChild(pl);
+        });
+      }
     </script>
-    <script type="module" crossorigin src="/assets/index-D0zxwvAb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D_Kwqkt1.css">
+    <script type="module" crossorigin src="/assets/index-B6fvIcNi.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BYiEuc_Z.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
