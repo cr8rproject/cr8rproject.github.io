@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#292524" />
 
-    <title>CR8R</title>
+    <title>ATLR404 Private</title>
     <!-- The public page's words (2026-09-29): what a link preview shows in an
-         Instagram DM, WhatsApp or iMessage before the page opens. The public
-         face is ATLR404 Private; CR8R is never on it. -->
+         Instagram DM, WhatsApp or iMessage before the page opens. Every page
+         carries the house's name, ATLR404 Private. -->
     <meta name="description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
-    <meta name="author" content="CR8R" />
+    <meta name="author" content="ATLR404 Private" />
 
-    <!-- Inline SVG favicon: CR8R orange wordmark monogram on charcoal -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23292524'/><text x='50' y='62' font-family='Inter,system-ui,sans-serif' font-size='42' font-weight='800' text-anchor='middle' fill='%23E8775D'>CR</text><text x='50' y='86' font-family='Inter,system-ui,sans-serif' font-size='14' font-weight='600' text-anchor='middle' fill='%23E8775D' letter-spacing='2'>8R</text></svg>" />
+    <!-- Inline SVG favicon: the house's ring, orange on charcoal, the app's
+         pair (the public face draws the same ring white on black, below;
+         scripts/make-icons.py draws it into the PNG icons). -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23292524'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23E8775D' stroke-width='5'/></svg>" />
 
     <!-- Installed app (iOS). The manifest link is injected by
          vite-plugin-pwa at build time. -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="CR8R" />
+    <meta name="apple-mobile-web-app-title" content="ATLR404" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
 
     <!-- Both families are served from this origin (see the @font-face block at
@@ -52,7 +54,7 @@
         document.documentElement.classList.add("public-surface");
         var tc = document.querySelector('meta[name="theme-color"]');
         if (tc) tc.setAttribute("content", "#0a0a0a");
-        // The public face is ATLR404 Private, never CR8R: the tab, its icon
+        // The public face is ATLR404 Private: the tab, its icon
         // and the name a phone gives the page on its home screen.
         document.title = "ATLR404 Private \u00b7 Maison de production";
         var icon = document.querySelector('link[rel="icon"]');
@@ -86,8 +88,8 @@
         });
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DRkYBecV.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ChmTiFRD.css">
+    <script type="module" crossorigin src="/assets/index-D1nhjb4N.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DmfZ8I50.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
