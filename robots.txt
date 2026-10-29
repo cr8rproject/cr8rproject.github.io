@@ -1,3 +1,9 @@
+# Closed beta (2026-10-29). Search engines may crawl, so they read the
+# noindex of every page (index.html) and list none; an engine kept out
+# would still list a bare address found in a link. Link previews read the
+# page as before. The crawlers that gather pages for AI models are kept out
+# of the whole site.
+
 User-agent: Googlebot
 Allow: /
 
@@ -9,6 +15,18 @@ Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: meta-externalagent
+Disallow: /
 
 User-agent: *
 Allow: /
