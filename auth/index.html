@@ -9,9 +9,10 @@
 
     <title>ATLR404 Private</title>
     <!-- The public page's words (2026-09-29): what a link preview shows in an
-         Instagram DM, WhatsApp or iMessage before the page opens. Every page
-         carries the house's name, ATLR404 Private. -->
-    <meta name="description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
+         Instagram DM, WhatsApp or iMessage before the page opens, since
+         2026-11-06 the hero's line in the words of the plan of 2026-11-02.
+         Every page carries the house's name, ATLR404 Private. -->
+    <meta name="description" content="Produce in the same Portuguese factories as the world's best brands, from just 50 MOQ. Design your drop with AI." />
     <meta name="author" content="ATLR404 Private" />
     <!-- Closed beta (2026-10-29): no search engine lists a page of the site.
          Every route is served a copy of this file, so this tag covers them
@@ -42,13 +43,13 @@
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ATLR404 Private" />
-    <meta property="og:description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
+    <meta property="og:description" content="Produce in the same Portuguese factories as the world's best brands, from just 50 MOQ. Design your drop with AI." />
     <meta property="og:site_name" content="ATLR404 Private" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="ATLR404 Private" />
-    <meta name="twitter:description" content="Custom fashion production in Portugal’s luxury ateliers, from 50 pieces. Entry by application." />
+    <meta name="twitter:description" content="Produce in the same Portuguese factories as the world's best brands, from just 50 MOQ. Design your drop with AI." />
     <!-- The public page is black from the first paint (2026-09-29 audit: the
          back office's grey grid showed for up to two seconds before it). The
          router takes the class off again if it sends the visitor elsewhere. -->
@@ -68,9 +69,10 @@
         var appTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
         if (appTitle) appTitle.setAttribute("content", "ATLR404");
       }
-      // The landing's first picture, fetched before the first paint, as
-      // ATLR404's site does for its opening: the opening waits for it, and on
-      // a cold visit the request used to start only once the app had loaded.
+      // The landing's first picture, the hero clip's first frame since
+      // 2026-11-06, fetched before the first paint: it stands in for the clip
+      // on a slow line, and on a cold visit the request used to start only once
+      // the app had loaded.
       // One file per framing, the same the page's <picture> picks, so nothing
       // downloads twice. Only when the landing will show: LANDING_OPEN
       // follows src/lib/flags.ts (a test keeps them together), and while the
@@ -79,8 +81,8 @@
       var previewing = /[?&]preview=1(&|$)/.test(location.search);
       if (publicPath === "/" && (LANDING_OPEN || previewing)) {
         [
-          ["/landing/draft-production-tall.jpg", "(max-width: 1023.98px)"],
-          ["/landing/draft-production-wide.jpg", "(min-width: 1024px)"],
+          ["/landing/factory-hero-tall.jpg", "(max-width: 1023.98px)"],
+          ["/landing/factory-hero-wide.jpg", "(min-width: 1024px)"],
         ].forEach(function (pick) {
           var pl = document.createElement("link");
           pl.rel = "preload";
@@ -93,8 +95,8 @@
         });
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DUmL86R7.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DmfZ8I50.css">
+    <script type="module" crossorigin src="/assets/index-DT0foHTq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-IO38EaCG.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
