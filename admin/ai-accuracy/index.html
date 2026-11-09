@@ -32,13 +32,12 @@
     <meta name="apple-mobile-web-app-title" content="ATLR404" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
 
-    <!-- Both families are served from this origin (see the @font-face block at
-         the top of src/index.css). The Google stylesheet used to be deferred,
-         so the first paint used the system font and the page recomposed itself
-         once it arrived. These two are the faces the first screen needs:
-         Inter 300 draws the display line, Inter 400 the line under it. -->
-    <link rel="preload" href="/fonts/inter-300-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Inter is served from this origin (see the @font-face block at the top
+         of src/index.css). The Google stylesheet used to be deferred, so the
+         first paint used the system font and the page recomposed itself once
+         it arrived. Inter is a variable font: this one latin file draws every
+         weight the first screen sets in Inter. -->
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
@@ -95,8 +94,8 @@
         });
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-Ln6E8R4l.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DdT4PKkJ.css">
+    <script type="module" crossorigin src="/assets/index-B2vTrgwq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CHZt83fF.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>

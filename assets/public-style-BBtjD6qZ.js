@@ -1,0 +1,1 @@
+const t="font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-white/55",e="font-mono text-[11px] font-medium uppercase tracking-[0.22em]",o="[@media(hover:hover)]:hover:border-claude-orange [@media(hover:hover)]:hover:bg-claude-orange/10",r=`border border-claude-orange/60 bg-transparent ${e} text-white transition-colors ${o}`;export{t as P,e as a,r as b};
