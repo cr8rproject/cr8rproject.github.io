@@ -79,6 +79,7 @@
       var LANDING_OPEN = false;
       var previewing = /[?&]preview=1(&|$)/.test(location.search);
       if (publicPath === "/" && (LANDING_OPEN || previewing)) {
+        document.documentElement.classList.add("cr-stage-lock"); // the landing never scrolls (useScreenEngine.ts), not even before its code
         [
           ["/landing/factory-hero-tall.jpg", "(max-width: 1023.98px)"],
           ["/landing/factory-hero-wide.jpg", "(min-width: 1024px)"],
@@ -94,8 +95,8 @@
         });
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-Ccvsqth4.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CHZt83fF.css">
+    <script type="module" crossorigin src="/assets/index-DGRfm0uW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CK_4ErSa.css">
   <link rel="manifest" href="/manifest.webmanifest"></head>
 
   <body>
