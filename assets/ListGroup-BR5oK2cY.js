@@ -1,6 +1,0 @@
-import{c as o}from"./createLucideIcon-DvXpoGya.js";import{r as d,j as s,c}from"./index-Bu-8MHiw.js";/**
- * @license lucide-react v0.462.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const u=o("Inbox",[["polyline",{points:"22 12 16 12 14 15 10 15 8 12 2 12",key:"o97t9d"}],["path",{d:"M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z",key:"oot6mr"}]]);function h({label:n,count:e,countWords:a,headingLevel:t=3,children:r,className:l}){const i=d.useId(),m=t===4?"h4":"h3";return s.jsxs("li",{className:c("admin-kit-list-group min-w-0",l),children:[s.jsxs(m,{id:i,className:"relative flex min-w-0 items-baseline gap-2 text-xs font-semibold uppercase tracking-[0.06em] text-muted-foreground",children:[s.jsx("span",{className:"min-w-0 break-words",children:n}),e!==void 0&&s.jsxs(s.Fragment,{children:[s.jsx("span",{"aria-hidden":!0,className:"shrink-0 font-medium tabular-nums text-muted-foreground/70",children:e}),a&&s.jsx("span",{className:"sr-only",children:a})]})]}),s.jsx("ul",{"aria-labelledby":i,className:"admin-kit-list mt-2 min-w-0",children:r})]})}export{u as I,h as L};
