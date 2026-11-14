@@ -1,0 +1,1 @@
+import{g as n}from"./garment-words-CkkjCIyJ.js";function d(t,o,r){const e=n(r,t);return e===r||o==="pseudo"?e:e.toLocaleLowerCase(o==="pt"?"pt-PT":"en-GB")}const a={linked:"done",none:"neutral",archived:"todo",not_found:"error",skipped:"todo"};function u(t,o){return t(`house-product.state.${o}`)}export{a as S,d as g,u as s};

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Zoom stays allowed (accessibility). viewport-fit=cover so the
+         installed PWA paints under the iOS status bar. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#292524" />
+
+    <title>ATLR404 Private</title>
+    <!-- The public page's words (2026-09-29): what a link preview shows in an
+         Instagram DM, WhatsApp or iMessage before the page opens, since
+         2026-11-07 the hero's title and its line, as Serge chose them.
+         Every page carries the house's name, ATLR404 Private. -->
+    <meta name="description" content="Fashion production from 50 pieces. Our own factories. Made in Portugal." />
+    <meta name="author" content="ATLR404 Private" />
+    <!-- Closed beta (2026-10-29): no search engine lists a page of the site.
+         Every route is served a copy of this file, so this tag covers them
+         all; link previews still read the tags below. Lifted at the public
+         opening. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Inline SVG favicon: the house's ring, orange on charcoal, the app's
+         pair (the public face draws the same ring white on black, below;
+         scripts/make-icons.py draws it into the PNG icons). -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23292524'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23E8775D' stroke-width='5'/></svg>" />
+
+    <!-- Installed app (iOS). The manifest link is injected by
+         vite-plugin-pwa at build time. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ATLR404" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
+
+    <!-- Inter is served from this origin (see the @font-face block at the top
+         of src/index.css). The Google stylesheet used to be deferred, so the
+         first paint used the system font and the page recomposed itself once
+         it arrived. Inter is a variable font: this one latin file draws every
+         weight the first screen sets in Inter. -->
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ATLR404 Private" />
+    <meta property="og:description" content="Fashion production from 50 pieces. Our own factories. Made in Portugal." />
+    <meta property="og:site_name" content="ATLR404 Private" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ATLR404 Private" />
+    <meta name="twitter:description" content="Fashion production from 50 pieces. Our own factories. Made in Portugal." />
+    <!-- The public page is black from the first paint (2026-09-29 audit: the
+         back office's grey grid showed for up to two seconds before it). The
+         router takes the class off again if it sends the visitor elsewhere. -->
+    <script>
+      // GitHub Pages serves "/apply" as "/apply/": the slash never matters.
+      var publicPath = location.pathname.replace(/\/+$/, "") || "/";
+      if (publicPath === "/" || publicPath === "/apply") {
+        document.documentElement.classList.add("public-surface");
+        var tc = document.querySelector('meta[name="theme-color"]');
+        if (tc) tc.setAttribute("content", "#0a0a0a");
+        // The public face is ATLR404 Private: the tab, its icon
+        // and the name a phone gives the page on its home screen.
+        document.title = "ATLR404 Private \u00b7 Maison de production";
+        var icon = document.querySelector('link[rel="icon"]');
+        if (icon) icon.setAttribute("data-app-href", icon.getAttribute("href"));
+        if (icon) icon.setAttribute("href", "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><circle cx='50' cy='50' r='26' fill='none' stroke='%23ffffff' stroke-width='5'/></svg>");
+        var appTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
+        if (appTitle) appTitle.setAttribute("content", "ATLR404");
+      }
+      // The landing's first picture, the hero clip's first frame since
+      // 2026-11-06, fetched before the first paint: it stands in for the clip
+      // on a slow line, and on a cold visit the request used to start only once
+      // the app had loaded.
+      // One file per framing, the same the page's <picture> picks, so nothing
+      // downloads twice. Only when the landing will show: LANDING_OPEN
+      // follows src/lib/flags.ts (a test keeps them together), and while the
+      // site is closed only the preview shows it.
+      var LANDING_OPEN = false;
+      var previewing = /[?&]preview=1(&|$)/.test(location.search);
+      if (publicPath === "/" && (LANDING_OPEN || previewing)) {
+        document.documentElement.classList.add("cr-stage-lock"); // the landing never scrolls (useScreenEngine.ts), not even before its code
+        [
+          ["/landing/factory-hero-tall.jpg", "(max-width: 1023.98px)"],
+          ["/landing/factory-hero-wide.jpg", "(min-width: 1024px)"],
+        ].forEach(function (pick) {
+          var pl = document.createElement("link");
+          pl.rel = "preload";
+          pl.as = "image";
+          pl.href = pick[0];
+          pl.media = pick[1];
+          pl.setAttribute("fetchpriority", "high");
+          pl.setAttribute("data-landing-preload", "");
+          document.head.appendChild(pl);
+        });
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BA1DSswK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B8sutsmn.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
