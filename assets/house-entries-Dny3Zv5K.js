@@ -1,1 +1,0 @@
-import{h as u,H as n}from"./library-view-DqQeLCHY.js";const s="product";function i(e,o){return u().map(r=>({id:r.id,label:e(r.label),href:o.family(r.id)}))}function t(e,o){return e.family(n,{[s]:o})}function h(e,o,r){return{label:e("sheet.house.open",{label:e("family.house")}),href:t(o,r)}}export{s as H,h,i as p};
